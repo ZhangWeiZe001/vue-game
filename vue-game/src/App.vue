@@ -1,19 +1,20 @@
 <template>
- <div>
-   <router-view></router-view>
- </div>
+  <div>
+    <router-view></router-view>
+  </div>
+
 </template>
 
 <script>
 
-//引入重置样式
-import './assets/css/ChongZhi.css'
+//老三样
+import {nextTick,ref,provide} from 'vue';
+import { useRouter } from 'vue-router';
 
-//引入字体样式
-import './assets/css/iconfont/css/all.css'
 export default {
-name:'APP'
+    name: "app",
 }
+
 </script>
 
 <style>

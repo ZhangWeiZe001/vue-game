@@ -1,17 +1,21 @@
-import {createRouter,createWebHashHistory} from 'vue-router'
+import {createRouter,createWebHashHistory,createWebHistory} from 'vue-router'
 
 const routes= [
+  //xxx
   {
-   path:'/',
-   component:()=> import('@/components/homePage/homePage.vue')
-  }
+    name:'xxx',
+    path:'/',
+    component:()=>import('@/components/home.vue')
+  },
 ]
 
 const router = new createRouter({
     mode:'hash',
     //createWebHashHistory 使用这个表示 hash方式
+    // history:createWebHashHistory(),
+
     //createWebHistory 表示 History 模式
-    history:createWebHashHistory(),
+    history:createWebHistory(),
     routes,
 })
 

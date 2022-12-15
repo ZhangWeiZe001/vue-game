@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const session = require('express-session');
+const mysql = require('mysql')//mysql数据库
 
 //导入路由模块
 const userRouter = require('./module')
@@ -14,7 +15,6 @@ var bodyParser = require('body-parser')
 app.use(bodyParser.json({limit:'50mb'}));
 app.use(bodyParser.urlencoded({limit:'50mb',extended:true}));
 
-//中间件
 
 //接收路由
 app.use(userRouter);
