@@ -1,12 +1,24 @@
 import {createRouter,createWebHashHistory,createWebHistory} from 'vue-router'
 
 const routes= [
-  //xxx
+  //home(入口路由)
   {
-    name:'xxx',
+    name:'home',
     path:'/',
-    component:()=>import('@/components/home.vue')
+    component:()=>import('@/components/Home/home.vue')
   },
+  //DiShu(打地鼠游戏)
+  {
+    name:'DiShu',
+    path:'/DiShu',
+    component:()=>import('@/components/game/DiShu/main.vue')
+  },
+  //DouShou(斗兽棋)
+  {
+    name:'DouShou',
+    path:'/DouShou',
+    component:()=>import('@/components/game/DouShou/main.vue')
+  }
 ]
 
 const router = new createRouter({

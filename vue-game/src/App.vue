@@ -1,4 +1,5 @@
 <template>
+  <top></top>
   <div>
     <router-view></router-view>
   </div>
@@ -11,8 +12,11 @@
 import {nextTick,ref,provide} from 'vue';
 import { useRouter } from 'vue-router';
 
+import top from './general/top.vue';
+
 export default {
-    name: "app",
+  components: { top },
+  name: "app",
 }
 
 </script>
